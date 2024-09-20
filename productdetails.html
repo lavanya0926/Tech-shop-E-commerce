@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+    body{
+        background-color:black;
+        margin:0;
+        padding:0;
+    }
+    header{
+        display:flex;
+        list-style:none;
+        gap:150px;
+        margin-bottom: 20px;
+        margin-top: 20px;
+        justify-content: space-evenly;
+        size:100px;
+        position:sticky;
+        top:0px;
+        z-index:1000;
+         border:1px solid rgb(36, 34, 34); 
+        background-color: rgb(36, 34, 34); 
+    }
+    header li a{
+        color:rgb(207, 225, 240);
+        text-decoration: none;
+        margin-top: 25px;
+    }
+    header b{
+        font-size:xx-large;
+    }
+    .headerImages{
+        display:flex;
+        gap:30px;
+        padding: 10px;
+        margin-left:750px;
+        font-size:x-large;
+    }
+    .headerImages .glass:hover{
+    color:red;
+    }
+    .headerImages .cart:hover{
+        color:red;
+    }
+    .headerImages .signup:hover{
+            color:red;
+    }
+    .productsDetails{
+        margin-top:30px;
+        display: flex;
+    }
+    .productsDetails .products{
+        display:flex;
+        flex-direction:column;
+        margin-left:10px;
+        margin-top:80px;
+        width:180px;
+        height:180px;
+        gap:20px;
+        border:1px solid whitesmoke;
+    }
+    .productsDetails .product2,.product3 ,.product4{
+        border:1px solid rgb(78, 73, 73);   
+    }
+    .productsDetails .product{
+        width:600px;
+        height:780px;
+        margin-left:80px;
+        margin-top: 80px;   
+    }
+    .productContent{
+        color:rgb(207, 225, 240);
+        margin-top:50px;
+    }
+    .productName h2{
+        font-size:xx-large;
+    }
+    .productName p{
+        font-size: x-large;
+    }
+    .productName span{
+        color:red;
+        font-size:15px;
+    }
+    .productName .rating{
+        color:rgb(150, 147, 147);
+        font-size:x-large;
+    }
+    .productName hr{
+        margin-top:40px;
+        margin-bottom:30px;
+        margin-right: 10px;
+        border-color:rgb(100, 99, 99);
+    }
+    .prodcutContent .stock{
+        display: flex;
+        color:rgb(207, 225, 240);
+    }
+    .stock .offerPrice{
+        color:rgb(207, 225, 240);
+        font-size:40px;
+    }
+    .stock .actualPrice{
+        color:rgb(150, 147, 147);
+        font-size:xx-large;
+    }
+    .stock .savings{
+        color:green;
+        font-size:x-large;
+    }
+    .stock .taxes{
+        color:rgb(150, 147, 147);
+        font-size:x-large;
+    }
+    .stock button{
+        margin-left:300px;
+        position:relative;
+        bottom:100px;
+        background-color: green;
+        color:white;
+        border: none;
+        padding:8px;
+        width:120px;
+        font-size:medium;
+    }
+    .stock hr{
+        border-color:rgb(100, 99, 99);
+        position:relative;
+        margin-right: 10px;
+        margin-bottom: 50px;
+    }
+    .offers{
+        display:flex;
+    }
+    .offer{
+         font-size:30px;
+    }
+    .offers p{
+        border:1px solid white;
+        margin:30px 10px 20px 0px;
+        padding:10px;
+        color:rgb(207, 225, 240);
+        font-size:larger;
+    }
+    .Hr{
+        border-color: rgb(100, 99, 99);
+        margin-right: 8px;
+        margin-top: 20px;
+    }
+    .addToCart{
+        margin-top: 20px;
+        margin-left:5px;
+        color:white;
+        background-color: red;
+        border:none;
+        padding:15px;
+        width:200px;
+        font-size: larger;
+    }
+    .specifications{
+        margin-top:200px;
+        margin-left:300px;
+        border:none;
+        display:flex;
+    }
+    .specifications button{
+        background-color:black;
+        color:rgb(207, 225, 250);
+        padding:8px;
+        font-size:larger;
+        border:none;
+    }
+    .specifications .btn1{
+        background-color: red;
+        width:250px;
+    }
+    .specifications .btn2,.btn3{
+        width:250px;
+    }
+    .brands{
+        display:flex;
+        gap:150px;
+        margin-top: 80px;
+        font-size:large;
+    }
+    .brandSpecification{
+        color:rgb(207, 225, 250) ;
+        margin-left:60px;
+    }
+    .brandNames{
+        color:rgb(207, 225, 250);
+    }
+    .heading{
+        text-align:center;
+        color:rgb(207, 225, 240);
+        margin-top:120px;
+        font-size: 35px;
+    }
+    .topProductsContainer{
+        display:flex;
+        flex-wrap:wrap;
+        gap:10px;
+        margin:80px 0px 10px 12px;
+    }
+    .topProductsContainer hr{
+        border-color: rgb(102, 103, 104);
+    }
+    .productCard{
+        width:320px;
+        border:1px solid rgb(60, 61, 61);
+        color:aliceblue;
+    }
+    .productCard img{
+        width:90%;
+        height:280px;
+        object-fit: cover;
+        background-color: black;
+        border:1px solid black;
+        margin-left:10px;
+        margin-top:10px ;
+    }
+    .rating,.productDetails{
+        margin-top: 10px;
+        margin-left: 10px;
+    }
+    .rating{
+        color:red;
+        font-size:large;
+    }
+    .productDetails b{
+        font-size:xx-large;
+    }
+    .productDetails p{
+        font-size:x-large;
+        color:rgb(207, 225, 240);
+    }
+    hr{
+        margin-right: 10px;
+    }
+    .productDetails .offerPrice{
+        font-size:35px;
+    }
+    .productDetails .actualPrice{
+        font-size:xx-large;
+        color:rgb(153, 135, 135);
+    }
+    button{
+        width:90%;
+        padding:8px;
+        background-color: red;
+        margin-bottom: 10px;
+        border:none;
+        font-size: x-large;
+    }
+    .advantages h1{
+        margin-bottom:100px;
+        margin-top:150px;
+        text-align: center;
+        color:rgb(207, 225, 240);
+        font-size:xx-large;
+    }
+    .content {
+        display: flex;
+        justify-content: space-evenly;
+        margin-left: 20px;
+    }
+    .image{
+        display: flex;
+        font-size:50px;
+        color:red;
+        height:40px;
+        width:40px;
+        margin-top:15px;
+    }
+    .details{
+        margin-right:30px;
+        color:rgb(196, 220, 243);
+        margin-left:20px;
+        margin-top: 10px;
+    }
+    .details b{
+        font-size:x-large;
+    }
+    .details p{
+        font-size:larger;
+        color:rgb(141, 142, 143);
+        margin-top:5px;
+    }
+    .contactPage{
+        background-color: rgb(24, 22, 22);
+    }
+    .footer{
+        display:flex;
+        margin-top:100px;
+        background-color: rgb(24, 22, 22);
+
+    }
+    .footerContent{
+        margin-top:50px;
+        margin-left:10px;
+        display: flex;
+        gap:130px;
+        padding:10px;
+        color:aliceblue;
+    }
+    .footerContent b{
+        font-size:x-large;
+    }
+    .footerContent p{
+        font-size:larger;
+        color:rgb(157, 161, 163);
+    }
+    .footerContent1{
+        width:30%;
+    }
+    .footerContent1 b{
+          font-size:xx-large;
+    }
+    .footerContent1 input{
+         background-color: rgb(24, 22, 22);
+         color:rgb(184, 176, 176); 
+         border-color:rgb(224, 203, 203); 
+         width:300px;
+         padding:8px;
+         font-size:large;
+    }
+    .footerContent1 button{
+        width:200px;
+        background-color: red;
+        color:white;
+    }
+    .footerhr{
+        border-color:rgb(43, 41, 41);
+    }
+    .copyRights{
+        background-color: rgb(24, 22, 22);
+        color:rgb(190, 191, 192);
+        display: flex;
+        padding:30px;
+        gap:480px;
+    }
+    .copyRights .publish{
+        font-size:larger;
+    }
+    .icons{
+        gap:50px;
+        display:flex;
+        margin-left:200px;
+        size:400px;
+    }
+</style>    
+</head>
+<body>
+    <header>
+        <li><a href="index.html"><b>Tech-Shop</b></a></li>
+            <div class="headerImages">
+                <li><a href="searchIcon.html" target="_blank"><i class="fa-solid fa-magnifying-glass"></i></a></li>
+                <li><a href=""><i class="fa-solid fa-cart-shopping"></i></a></li>
+                <li><a href="Registration.html" target="_blank"><i class="fa-solid fa-user-plus"></i></a></li>
+            </div>
+    </header>
+    <div class="productsDetails">
+        <div class="products">
+            <img src="/Assets/featureproduct4.png" alt="product1">
+            <img src="/Assets/productdetails1.png" alt="product2" class="product2">
+            <img src="/Assets/productdetails2.png" alt="product3" class="product3">
+            <img src="/Assets/productdetails3.png" alt="product4" class="product4">
+        </div>
+        <img src="/Assets/featureproduct4.png" alt="product" class="product">
+        <div class="productContent">
+            <div class="productName">
+                <h2> JBL Live 660NC</h2>
+                <p>Wireless Over-Ear NC Headphones</p>
+                <span><i class="fa-solid fa-star"></i></span>
+                <span><i class="fa-solid fa-star"></i></span>
+                <span><i class="fa-solid fa-star"></i></span>
+                <span><i class="fa-solid fa-star"></i></span>
+                <span><i class="fa-solid fa-star"></i></span>
+                <span class="rating"> | 1234 Ratings</span>
+                <hr> 
+            </div>
+            <div class="stock">
+                <pre><strong class="offerPrice">₹9,999</strong> <strike class="actualPrice">₹14,999</strike></pre>
+                <p class="savings">You save:₹5,000 (33%)</p>
+                <p class="taxes">(Inclusive of all taxes)</p>
+                <button class="inStock">In Stock</button>
+                <hr>
+            </div>
+            <b class="offer">Offers and Discounts</b>
+            <div class="offers">
+                <P> NO Cost EMI on credit Card</P>
+                <p>Pay Later & Avail Cachback</p>
+            </div>
+            <hr class="Hr">
+            <button class="addToCart">Add to Cart</button>
+        </div>
+    </div>
+    <div class="specifications">
+        <button class="btn1">Specifications</button>
+        <button class="btn2">Overview</button>
+        <button class="btn3">Reviews</button>
+    </div>
+    <div class="brands">
+        <div class="brandSpecification">
+           <p>Brand</p>
+           <p>Model</p>
+           <p>Generic Name</p>
+           <p>Headphone Type</p>
+           <p>Connectivity</p>
+           <p>Microphone</p>
+        </div>
+        <div class="brandNames">
+            <p> JBL </p>
+            <p>JBL Live 660NC</p>
+            <p> Headphones</p>
+            <p>Over Ear</p>
+            <p> Wireless</p>
+            <p>Yes</p>
+        </div>
+    </div>
+    <h1 class="heading">Related Products</h1>
+    <div class="topProductsContainer">
+        <div class="productCard">
+            <img src="/Assets/featureproduct4.png" alt="topProduct1">
+              <div class="rating">
+                  <span><i class="fa-solid fa-star"></i></span>
+                  <span><i class="fa-solid fa-star"></i></span>
+                  <span><i class="fa-solid fa-star"></i></span>
+                  <span><i class="fa-solid fa-star"></i></span>
+                  <span><i class="fa-solid fa-star"></i></span>
+              </div>
+              <div class="productDetails">
+                  <b>JBL Live 660NC</b>
+                  <p>wireless Over-Ear Nc Headphones</p>
+                  <hr>
+                  <pre><strong class="offerPrice">₹9,999</strong> <strike class="actualPrice">₹14,999</strike></pre>
+                  <button>Add to cart</button>
+              </div>
+        </div>
+
+        <div class="productCard">
+            <img src="/Assets/featureproduct3.png" alt="topProduct2">
+            <div class="rating">
+                <span><i class="fa-solid fa-star"></i></span>
+                <span><i class="fa-solid fa-star"></i></span>
+                <span><i class="fa-solid fa-star"></i></span>
+                <span><i class="fa-solid fa-star"></i></span>
+                <span><i class="fa-solid fa-star"></i></span>
+            </div>
+            <div class="productDetails">
+                <b>boAt Rockerz 518</b>
+                <p>On-Ear Wireless Headphones</p>
+                <hr>
+                <pre><strong class="offerPrice">₹1,299</strong> <strike class="actualPrice">₹3,900</strike></pre>
+                <button>Add to cart</button>
+            </div>
+        </div>
+
+        <div class="productCard">
+            <img src="/Assets/topproduct5.png" alt="topProduct5">
+            <div class="rating">
+                <span><i class="fa-solid fa-star"></i></span>
+                <span><i class="fa-solid fa-star"></i></span>
+                <span><i class="fa-solid fa-star"></i></span>
+                <span><i class="fa-solid fa-star"></i></span>
+                <span><i class="fa-solid fa-star"></i></span>
+            </div>
+            <div class="productDetails">
+                <b>boAt Rockerz 410</b>
+                <p>Bluetooths & wired On-Ear Headphones</p>
+                <hr>
+                <pre><strong class="offerPrice">₹1,599</strong> <strike class="actualPrice">₹2,990</strike></pre>
+                <button>Add to cart</button>
+            </div>
+        </div>
+
+        <div class="productCard">
+            <img src="/Assets/topproduct7.png" alt="topProduct7">
+            <div class="rating">
+                <span><i class="fa-solid fa-star"></i></span>
+                <span><i class="fa-solid fa-star"></i></span>
+                <span><i class="fa-solid fa-star"></i></span>
+                <span><i class="fa-solid fa-star"></i></span>
+            </div>
+            <div class="productDetails">
+                <b>Sony WH-XB910N</b>
+                <p>Wireless Over-Ear Headphones</p>
+                <hr>
+                <pre><strong class="offerPrice">₹13,489</strong> <strike class="actualPrice">₹19,990</strike></pre>
+                <button>Add to cart</button>
+            </div>
+        </div>
+    </div> 
+    <div class="advantages">
+        <h1>Our Advantages</h1>
+        <div class="content">
+            <div class="image">
+                <i class="fa-solid fa-truck"></i>
+            </div>
+            <div class="details">
+                <b>Express Delivery</b>
+                <p>Ships in 24 Hours</p>
+            </div>
+
+         <div class="image">
+             <i class="fa-solid fa-shield-halved "></i>
+         </div>
+         <div class="details">
+             <b>Brand Warranty</b>
+             <p>100% Original products</p>
+         </div>
+
+         <div class="image">
+             <i class="fa-solid fa-tags"></i>
+         </div>
+         <div class="details">
+             <b>Exciting Deals</b>
+             <p>On all prepaid orders</p>
+         </div>
+
+         <div class="image">
+             <i class="fa-solid fa-credit-card"></i>
+         </div>
+         <div class="details">
+             <b>Secure Payments</b>
+             <p>SSL/Secure certificate</p>
+         </div>
+    </div>
+    <div class="contactPage">
+     <div class="footer">
+         <div class="footerContent">
+             <div class="footerContent1">
+                 <b>Tech-Shop</b>
+                 <p>Subscribe to our Email alerts to receive early discount offers,and new products info.</p>
+                 <label for="Email"></label>
+                 <input type="text" value="Email Address*">
+                 <br><br>
+                 <button>Subscribe</button>
+             </div>
+             <div class="footerContent2">
+                 <b>Help</b>
+                 <p>FAQs</p>
+                 <p>Track Order</p>
+                 <P>Cancel Order</P>
+                 <p>Return Order</p>
+                 <p>Warranty Info</p>
+             </div>
+             <div class="footerContent3">
+                 <b>Policies</b>
+                 <p>Return Policy</p>
+                 <p>Security</p>
+                 <p>Sitemap</p>
+                 <p>Privacy Policy</p>
+                 <p>Terms & Conditions</p>
+             </div>
+             <div class="footerContent4">
+                 <b>Company</b>
+                 <p>About Us</p>
+                 <p>Contact US</p>
+                 <p>Service Centres</p>
+                 <p>Careers</p>
+                 <p>Affiliates</p>
+             </div>
+         </div> 
+     </div>
+     <hr class="footerhr">
+     <div class="copyRights">
+         <div>2024 | All Rights Reserved.Built by | R.Lavanya</div>
+         <div class="icons">
+             <i class="fa-brands fa-facebook-f"></i>
+             <i class="fa-brands fa-twitter"></i>
+             <i class="fa-brands fa-instagram"></i>
+             <i class="fa-brands fa-linkedin-in"></i>
+         </div>
+     </div>
+ </div>
+</body>
+</html>

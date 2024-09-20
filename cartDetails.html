@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart Details</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+    body{
+    background-color:black;
+    margin:0;
+    padding:0;
+}
+header{
+    display:flex;
+    list-style:none;
+    gap:150px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    justify-content: space-evenly;
+    size:100px;
+    position:sticky;
+    top:0px;
+    z-index:1000;
+     border:1px solid rgb(36, 34, 34); 
+    background-color: rgb(36, 34, 34); 
+}
+header li a{
+    color:rgb(207, 225, 240);
+    text-decoration: none;
+}
+.header b{
+    font-size:larger;
+}
+.headerImages{
+    margin-top:25px;
+    display:flex;
+    gap:40px;
+    padding: 10px;
+    margin-left:750px;
+    font-size:x-large;
+}
+.headerImages .glass:hover{
+color:red;
+}
+.headerImages .cart:hover{
+    color:red;
+}
+.headerImages .signup:hover{
+        color:red;
+}
+ .fourCards{
+    display: flex;
+    margin-top:30px;
+}
+.orderSummary{
+    margin-left:130px;
+}
+.summary{
+    color: rgb(205, 206, 209);  
+    font-size:35px;
+}
+.productCost{
+    font-size: larger;
+}
+.cost{
+    color:rgb(179, 184, 184);
+    display: flex;
+    gap:150px;
+    font-size:x-large;
+    margin-top: 10px;
+}
+.cost1{
+    font-size: xx-large;
+}
+.cost2,.free{
+    color:green;
+}
+.free{
+    margin-left:50px;
+}
+.priceSummary{
+    font-size:larger;
+    color:rgb(172, 173, 179);
+}
+.costHr{
+    border-color: rgb(86, 86, 88);
+}
+.totalPrice{
+    color: rgb(176, 177, 182);
+    display: flex;
+    gap:200px;
+    font-size:25px;
+}
+.totalPrice h2{
+    font-size:30px;
+}
+.checkout{
+    background-color: red;
+    color:white;
+    width: 100%;
+    padding: 10px;
+    height:50px;
+    font-size: larger;
+    margin-top: 10px;
+    border-color: red;
+}
+.contactPage{
+    background-color: rgb(24, 22, 22);
+}
+.footer{
+    display:flex;
+    margin-top:100px;
+    background-color: rgb(24, 22, 22);
+}
+.footerContent{
+    margin-top:50px;
+    margin-left:10px;
+    display: flex;
+    gap:130px;
+    padding:10px;
+    color:aliceblue;
+}
+.footerContent b{
+    font-size:x-large;
+}
+.footerContent p{
+    font-size:larger;
+    color:rgb(157, 161, 163);
+}
+.footerContent1{
+    width:30%;
+}
+.footerContent1 b{
+      font-size:xx-large;
+}
+.footerContent1 input{
+     background-color: rgb(24, 22, 22);
+     color:rgb(184, 176, 176); 
+     border-color:rgb(224, 203, 203); 
+     width:300px;
+     padding:8px;
+     font-size:large;
+}
+.footerContent1 button{
+    width:200px;
+    background-color: red;
+    border-color: red;
+    color:white;
+    font-size: x-large;
+    height: 50px;
+}
+.footerhr{
+    border-color:rgb(43, 41, 41);
+}
+.copyRights{
+    background-color: rgb(24, 22, 22);
+    color:rgb(190, 191, 192);
+    display: flex;
+    padding:30px;
+    gap:480px;
+}
+.copyRights .publish{
+    font-size:larger;
+}
+.icons{
+    gap:40px;
+    display:flex;
+    margin-left:200px;
+    size:400px;
+}
+
+</style>
+</head>
+<body>
+    <header>
+        <li><a href="index.html"><h1>Tech-Shop</h1></a></li>
+            <div class="headerImages">
+                <li><a href="searchIcon.html" target="_blank"><i class="fa-solid fa-magnifying-glass glass"></i></a></li>
+                <li><a href=""><i class="fa-solid fa-cart-shopping cart"></i></a></li>
+                <li><a href="Registration.html" target="_blank"><i class="fa-solid fa-user-plus plus"></i></a></li>
+            </div>
+    </header>
+<div class="fourCards">
+       <iframe src="./frameproduct.html" frameborder="10" height="500px" width="50%" style="background-color: rgb(46, 44, 44); margin-top: 10px;"></iframe>
+    
+    <div class="orderSummary">
+        <b class="summary">Order Summary (4 items) </b>
+    <div class="cost">
+        <div class="priceSummary">
+            <P>Original Price</P>
+            <p>Discount</p>
+            <p>Delivery</p>
+        </div>
+        <div class="productCost">
+            <p class="cost1">₹22,978</p>
+            <p class="cost2">-₹10,132</p>
+            <p class="free">Free</p>
+        </div>
+    </div>
+    <hr class="costHr">
+    <div class="totalPrice">
+        <h3>Total Price</h3>
+        <h2>₹12,846</h3>
+    </div>
+    <button class="checkout">CheckOut</button>
+    </div>
+</div>
+<div class="contactPage">
+    <div class="footer">
+        <div class="footerContent">
+            <div class="footerContent1">
+                <b>Tech-Shop</b>
+                <p>Subscribe to our Email alerts to receive early discount offers,and new products info.</p>
+                <label for="Email"></label>
+                <input type="text" value="Email Address*">
+                <br><br>
+                <button class="subscribe">Subscribe</button>
+            </div>
+            <div class="footerContent2">
+                <b>Help</b>
+                <p>FAQs</p>
+                <p>Track Order</p>
+                <P>Cancel Order</P>
+                <p>Return Order</p>
+                <p>Warranty Info</p>
+            </div>
+            <div class="footerContent3">
+                <b>Policies</b>
+                <p>Return Policy</p>
+                <p>Security</p>
+                <p>Sitemap</p>
+                <p>Privacy Policy</p>
+                <p>Terms & Conditions</p>
+            </div>
+            <div class="footerContent4">
+                <b>Company</b>
+                <p>About Us</p>
+                <p>Contact US</p>
+                <p>Service Centres</p>
+                <p>Careers</p>
+                <p>Affiliates</p>
+            </div>
+        </div> 
+    </div>
+    <hr class="footerhr">
+    <div class="copyRights">
+        <div class="publish">2024 | All Rights Reserved.Built by | R.Lavanya</div>
+        <div class="icons">
+            <i class="fa-brands fa-facebook-f"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-linkedin-in"></i>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+</body>
+</html>

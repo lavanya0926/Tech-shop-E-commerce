@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+    .productDetails{
+    width:100%;
+    /* border: 1px solid rgb(26, 23, 23) ; */
+    /* border-color: rgb(26, 23, 23); */
+    background-color: rgb(26, 23, 23);
+}
+.product1{
+    color:rgb(207, 225, 240);
+    display: flex;
+}
+.product1 img{
+    height:150px;
+    width:150px;
+}
+.productContent{
+    margin-left:50px;
+}
+.trash{
+    display:flex;
+    gap:10px;   
+}
+.del{
+    margin-top:30px;
+    margin-right: 15px;
+}
+.trash p{
+    font-size:x-large;
+}
+button{
+    width:35px;
+    gap:0px;
+    height:30px;
+}
+button.remove{
+    border:none;
+    background-color: rgb(73, 72, 72);
+    color:aliceblue ;
+    font-size: x-large;
+}
+button.number{
+   border:none;
+   background-color: rgb(19, 18, 18);
+   color:red;
+   font-size: x-large;
+}
+button.add{
+    border:none;
+    background-color: rgb(73, 72, 72);
+    color:aliceblue ;
+    font-size: x-large;
+}
+.offerPrice{
+    font-size:25px;
+}
+.actualPrice{
+    font-size:20px;
+    color:rgb(153, 135, 135);
+}
+hr{
+    margin-top:25px;
+    margin-left: 10px;
+    border-color:rgb(31, 29, 29);
+}
+</style>
+</head>
+<body>
+    <div class="productDetails">
+        <div class="product1">
+            <img src="/Assets/featureproduct4.png" alt="product1">
+            <div class="productContent">
+                <div class="trash">
+                    <p>JBL Live 660NC Wireless Over-Ear NC Headphones</p>
+                    <i class="fa-solid fa-trash-can del"></i>
+                </div>
+                <pre><strong class="offerPrice">₹9,999</strong> <strike class="actualPrice">₹14,999</strike></pre>
+                <button class="remove">-</button>
+                <button class="number">1</button>
+                <button class="add">+</button>
+            </div>
+        </div>
+        <hr>
+
+        <div class="product1">
+            <img src="/Assets/featureproduct3.png" alt="product2">
+            <div class="productContent">
+                <div class="trash">
+                    <p>boAt Rockerz 518 On-Ear Wireless Headphones</p>
+                    <i class="fa-solid fa-trash-can del"></i>
+                </div>
+                <pre><strong class="offerPrice">₹1,299</strong> <strike class="actualPrice">₹3,990</strike></pre>
+                <button class="remove">-</button>
+                <button class="number">1</button>
+                <button class="add">+</button>
+            </div>
+        </div>
+        <hr>
+
+        <div class="product1">
+            <img src="/Assets/featureproduct2.png" alt="product1">
+            <div class="productContent">
+                <div class="trash">
+                    <p>boAt Airpodes 131 Wireless In-Ear Earbuds</p>
+                    <i class="fa-solid fa-trash-can del"></i>
+                </div>
+                <pre><strong class="offerPrice">₹1,099</strong> <strike class="actualPrice">₹2,990</strike></pre>
+                <button class="remove">-</button>
+                <button class="number">1</button>
+                <button class="add">+</button>
+            </div>
+        </div>
+        <hr>
+        <div class="product1">
+            <img src="/Assets/featureproduct1.png" alt="product1">
+            <div class="productContent">
+                <div class="trash">
+                    <p>boAt BassHeads 110 In-Ear wired Earphones</p>
+                    <i class="fa-solid fa-trash-can del"></i>
+                </div>
+                <pre><strong class="offerPrice">₹9,999</strong> <strike class="actualPrice">₹14,999</strike></pre>
+                <button class="remove">-</button>
+                <button class="number">1</button>
+                <button class="add">+</button>
+            </div>
+        </div>
+   
+</body>
+</html>
